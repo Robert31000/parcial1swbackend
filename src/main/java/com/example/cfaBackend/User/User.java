@@ -51,15 +51,10 @@ public class User implements UserDetails {
 
     String password;
     String email;
-   // String lastname;
-   // String country;
-
-    // Cambiamos String a Role, que es un Enum
+   
     @Enumerated(EnumType.STRING)
     Role role;
 
-    // Getters y setters
-    
    // Relación muchos a muchos con categorías
    @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
    @JoinTable(
